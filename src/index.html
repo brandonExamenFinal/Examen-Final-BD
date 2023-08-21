@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__display">
+                <a href="index.html" class="header__logo">
+                    <h1>CUC Flight</h1>
+                </a>
+                <nav class="navigation">
+                    <a href="./login.html" class="navigation__link">Iniciar Sesión</a>
+                    <a href="./index.html" class="navigation__link">Vuelos</a>
+                    <a href="./configuracion.html" class="navigation__link">Configuración</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- BUSCAR VUELO -->
+    <main class="main">
+        <div class="main__container">
+            <h2 class="main__heading">Millones de vuelos. En una simple búsqueda.</h2>
+            <form class="flightForm" action="" method="">
+                <fieldset class="form__fieldset">
+                    <div class="form__field">
+                        <label class="form__label" for="ciudadOrigen">Desde:</label>
+                        <select class="form__input" name="ciudadOrigen" id="ciudadOrigen" required>
+                            <option value="">-- Seleccione un Ciudad</option>
+                        </select>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label" for="fechaSalida">Fecha de Salida:</label>
+                        <input class="form__input" type="date" name="fechaSalida" id="fechaSalida" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <div class="form__field">
+                        <label class="form__label" for="ciudadDestino">Hacia:</label>
+                        <select class="form__input" name="ciudadDestino" id="ciudadDestino" required>
+                            <option value="">-- Seleccione un Ciudad</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form__field">
+                        <label class="form__label">Fecha de Regreso:</label>
+                        <input class="form__input" type="date">
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="form__fieldset form__fieldset-btn">
+                    <div class="form__field">
+                        <label class="form__label" for="personas">Personas:</label>
+                        <input class="form__input" placeholder="Ejemplo: 3" type="number" name="personas" id="personas">
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="tarifas">Tipo de Tarifa:</label>
+                        <select class="form__input" name="tarifas" id="tarifas" required>
+                            <option value="">-- Seleccione Tipo de Tarifa</option>
+                        </select>
+                    </div>
+                    
+                </fieldset>
+                <!-- Aqui el spinner -->
+                <div class="spinner_index" id="spinner"></div>
+                
+                <button id="buscar" class="form__button">Buscar Vuelos</button>
+            </form>
+            <!-- Aqui se va a insertar la alerta: <p class="alert">Debe de completar los campos...</p> -->
+        </div>
+    </main>
+
+    <section class="section">
+        <div class="section__container">
+            <h2 class="section__heading">Vuelos</h2>
+            <section class="section__display" id="vuelos">
+            <!-- Aqui se van a insertar los vuelos dinamicamente con Javascript -->
+            
+            </section>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <header class="footer__header">
+          <h3 class="footer__heading">Administración de Bases de Datos.</h3>
+        </header>
+        
+        <div class="footer__container">
+          <div class="footer__display">          
+            <div class="footer__column">
+              <h4 class="">Universidad:</h4>
+              <img class="cuc" src="./img/CUC.png" alt="CUC logo">
+              <a href="https://www.cuc.ac.cr/" target="_blank">Colegio Universitario de Cartago</a>
+            </div>
+  
+            <div class="footer__column">
+              <h4>Estudiantes:</h4>
+              <p>Brandon Gomez Carvajal</p>
+              <p>Mario Araya Fuentes</p>
+              <p>Yeison Hernandez Sanabria</p>
+              <p>Ana Najera Gomez</p>
+            </div>
+  
+            <div class="footer__column">
+              <h4>Acerca de:</h4>
+              <p>En este proyecto se han utilizado las tecnologías de HTML, CSS, Javascript, NodeJS, Express, SQL Server para el Examen Final de la materia Administración de Bases de Datos.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script type="module" src="./js/app.js"></script>
+</body>
+</html>

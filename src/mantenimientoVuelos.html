@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Mantenimiento Vuelos</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__display">
+                <a href="index.html" class="header__logo">
+                    <h1>CUC Flight</h1>
+                </a>
+                <nav class="navigation">
+                    <a href="./login.html" class="navigation__link">Iniciar Sesión</a>
+                    <a href="./index.html" class="navigation__link">Vuelos</a>
+                    <a href="./configuracion.html" class="navigation__link">Configuración</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- FORMULARIO DE VUELOS -->
+    <section class="section">
+        <div class="section__container">
+            <h2 class="section__heading">Mantenimiento de Vuelos</h2>
+            <form action="/registrarVuelo" method="post" class="form" id="vuelosForm">
+                <fieldset class="form__fieldset">
+                    <div class="form__field">
+                        <label for="origen" class="form__label">Origen:</label>
+                        <select class="form__input" name="origen" id="origen">
+                            <option value="">--Seleccione el Aereopuerto</option>
+                        </select>
+                    </div>
+                    <div class="form__field">
+                        <label for="destino" class="form__label">Destino:</label>
+                        <select class="form__input" name="destino" id="destino">
+                            <option value="">--Seleccione el Aereopuerto</option>
+                        </select>
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <div class="form__field">
+                        <label for="fechaVuelo" class="form__label">Fecha del Vuelo:</label>
+                        <input class="form__input" type="date" name="fechaVuelo" id="fechaVuelo">
+                    </div>
+
+                    <div class="form__field">
+                        <label for="horaSalida" class="form__label">Hora Salida:</label>
+                        <input class="form__input" type="time" name="horaSalida" id="horaSalida">
+                    </div>
+                    <div class="form__field">
+                        <label for="horaLlegada" class="form__label">Hora Llegada:</label>
+                        <input class="form__input" type="time" name="horaLlegada" id="horaLlegada">
+                    </div>
+                </fieldset>
+
+
+                <fieldset class="form__fieldset">
+                    <div class="form__field">
+                        <label for="tarifas" class="form__label">Tipo de Tarifa:</label>
+                        <select class="form__input" name="tarifas" id="tarifas">
+                            <option value="">-- Seleccione una Tarifa</option>
+                            <!-- Aqui se van a insertar las tarifas que hayan en la base de datos -->
+                        </select>
+                    </div>
+                </fieldset>
+                <button class="form__button" type="submit">Registrar Vuelo</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <header class="footer__header">
+            <h3 class="footer__heading">Administración de Bases de Datos.</h3>
+        </header>
+        
+        <div class="footer__container">
+            <div class="footer__display">          
+            <div class="footer__column">
+                <h4 class="">Universidad:</h4>
+                <img class="cuc" src="./img/CUC.png" alt="CUC logo">
+                <a href="https://www.cuc.ac.cr/" target="_blank">Colegio Universitario de Cartago</a>
+            </div>
+    
+            <div class="footer__column">
+                <h4>Estudiantes:</h4>
+                <p>Brandon Gomez Carvajal</p>
+                <p>Mario Araya Fuentes</p>
+                <p>Yeison Hernandez Sanabria</p>
+                <p>Ana Najera Gomez</p>
+            </div>
+    
+            <div class="footer__column">
+                <h4>Acerca de:</h4>
+                <p>En este proyecto se han utilizado las tecnologías de HTML, CSS, Javascript, NodeJS, Express, SQL Server para el Examen Final de la materia Administración de Bases de Datos.</p>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="./js/mantVuelos.js"></script>
+</body>
+</html>

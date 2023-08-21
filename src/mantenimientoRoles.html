@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Mantenimiento Roles</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__display">
+                <a href="index.html" class="header__logo">
+                    <h1>CUC Flight</h1>
+                </a>
+                <nav class="navigation">
+                    <a href="./login.html" class="navigation__link">Iniciar Sesión</a>
+                    <a href="./index.html" class="navigation__link">Vuelos</a>
+                    <a href="./configuracion.html" class="navigation__link">Configuración</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- FORMULARIO DE ROLES -->
+    <section class="section">
+        <div class="section__container">
+            <h2 class="section__heading">Mantenimiento de Roles</h2>
+            <form action="/registrarRoles" method="post" class="form" id="rolesForm">
+                <fieldset class="form__fieldset">
+                    <div class="form__field">
+                        <label for="descripcion" class="form__label">Descripción del Rol:</label>
+                        <input class="form__input" type="text" name="descripcion" id="descripcion">
+                    </div>
+                </fieldset>
+
+                <button class="form__button" type="submit">Registrar Rol</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <header class="footer__header">
+            <h3 class="footer__heading">Administración de Bases de Datos.</h3>
+        </header>
+        
+        <div class="footer__container">
+            <div class="footer__display">          
+            <div class="footer__column">
+                <h4 class="">Universidad:</h4>
+                <img class="cuc" src="./img/CUC.png" alt="CUC logo">
+                <a href="https://www.cuc.ac.cr/" target="_blank">Colegio Universitario de Cartago</a>
+            </div>
+    
+            <div class="footer__column">
+                <h4>Estudiantes:</h4>
+                <p>Brandon Gomez Carvajal</p>
+                <p>Mario Araya Fuentes</p>
+                <p>Yeison Hernandez Sanabria</p>
+                <p>Ana Najera Gomez</p>
+            </div>
+    
+            <div class="footer__column">
+                <h4>Acerca de:</h4>
+                <p>En este proyecto se han utilizado las tecnologías de HTML, CSS, Javascript, NodeJS, Express, SQL Server para el Examen Final de la materia Administración de Bases de Datos.</p>
+            </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
